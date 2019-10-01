@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View, Button} from 'react-native';
 import {ListItem} from 'react-native-elements';
 const axios = require('axios');
 
@@ -34,9 +34,7 @@ export default class Category extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.txtHeader}> Kategori Budaya </Text>
-        </View>
+        <Button title="Kategori Budaya" />
         <FlatList
           data={this.state.kategori}
           renderItem={this.renderItem}
@@ -51,15 +49,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 22,
-  },
-  sectionHeader: {
-    paddingTop: 2,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 2,
-    fontSize: 14,
-    fontWeight: 'bold',
-    backgroundColor: 'rgba(247,247,247,1.0)',
   },
   item: {
     padding: 10,
