@@ -7,10 +7,6 @@ export default class List extends Component {
     return (
       <View>
         <Text>Ini List</Text>
-        <Button
-          onPress={() => this.props.navigation.navigate('Home')}
-          title="Go To Home"
-        />
       </View>
     );
   }
